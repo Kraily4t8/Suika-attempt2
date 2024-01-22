@@ -9,7 +9,6 @@ class beaker {
     };
 
     draw(ctx) {
-        console.log("draw");
         ctx.strokeRect(this.x, this.y, this.w, this.h);
     };
 }

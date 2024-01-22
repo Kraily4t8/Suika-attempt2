@@ -8,6 +8,9 @@ ASSET_MANAGER.downloadAll(() => {
 
 	gameEngine.init(ctx);
 
+	// gameEngine.addEntity(new ball(gameEngine, 250, 30, 20));
+	gameEngine.addEntity(new ball(gameEngine, 250, 500, 20));
+
 	gameEngine.addEntity(new beaker(gameEngine, 50, 0, 400, 550));
 
 	gameEngine.start();
