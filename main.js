@@ -8,10 +8,13 @@ ASSET_MANAGER.downloadAll(() => {
 
 	gameEngine.init(ctx);
 
+	PARAMS.LEFTWALL = 50;
+	PARAMS.RIGHTWALL = 600;
+	PARAMS.FLOOR = 550;
 	// gameEngine.addEntity(new ball(gameEngine, 250, 30, 20));
-	gameEngine.addEntity(new ball(gameEngine, 250, 500, 20));
-
-	gameEngine.addEntity(new beaker(gameEngine, 50, 0, 400, 550));
+	gameEngine.addEntity(new ball(gameEngine, 260, 500, 20));
+	gameEngine.addEntity(new ball(gameEngine, 250, 400, 20));
+	gameEngine.addEntity(new beaker());
 
 	gameEngine.start();
 });
