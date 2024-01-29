@@ -9,7 +9,7 @@ ASSET_MANAGER.downloadAll(() => {
 	gameEngine.init(ctx);
 
 	PARAMS.LEFTWALL = 50;
-	PARAMS.RIGHTWALL = 600;
+	PARAMS.RIGHTWALL = 450;
 	PARAMS.FLOOR = 550;
 	// gameEngine.addEntity(new ball(gameEngine, 250, 30, 20));
 	gameEngine.addEntity(new ball(gameEngine, 260, 500, 20));

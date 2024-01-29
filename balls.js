@@ -31,16 +31,23 @@ class ball{
     collisionHandling() {
         this.friction = 1;
         
-        if (this.collideLeft() || this.collideRight()) {
-            this.velocity.x = -this.velocity.x * this.friction;
-            if (this.collideLeft()) this.x = this.radius;
-            if (this.collideRight()) this.x = this.game.surfaceWidth - this.radius;
+        if(this.collideLeft()) {
+            this.velocity.x = -this.velocity.x * this.friction / 2;
+            this.x = PARAMS.LEFTWALL + this.r;
+        }
+
+        if(this.collideRight()) {
+            this.velocity.x = -this.velocity.x * this.friction / 2;
+            this.x = PARAMS.RIGHTWALL - this.r;
         }
 
         if (this.collideBottom()) {
             this.velocity.y = -this.velocity.y * this.friction / 2;
+            this.velocity.x = -this.velocity.x * this.friction / 2;
             this.y = PARAMS.FLOOR - this.r;
         }
+
+        
 
         // collision with other circles
         for (var i = 0; i < this.game.entities.length; i++) {
