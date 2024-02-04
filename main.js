@@ -1,7 +1,8 @@
 const gameEngine = new GameEngine();
 
 const ASSET_MANAGER = new AssetManager();
-
+ASSET_MANAGER.queueDownload("cranberry.png");
+ASSET_MANAGER.queueDownload("cherry.png");
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");
@@ -12,8 +13,10 @@ ASSET_MANAGER.downloadAll(() => {
 	PARAMS.RIGHTWALL = 450;
 	PARAMS.FLOOR = 550;
 	// gameEngine.addEntity(new ball(gameEngine, 250, 30, 20));
-	gameEngine.addEntity(new ball(gameEngine, 260, 500, 20));
-	gameEngine.addEntity(new ball(gameEngine, 250, 400, 20));
+	// gameEngine.addEntity(new ball(gameEngine, 260, 500, 10));
+	// gameEngine.addEntity(new ball(gameEngine, 260, 500, 20));
+	// gameEngine.addEntity(new ball(gameEngine, 250, 400, 20));
+	gameEngine.addEntity(new mouseStuff(gameEngine));
 	gameEngine.addEntity(new beaker());
 
 	gameEngine.start();
