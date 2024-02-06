@@ -4,11 +4,14 @@ class beaker {
     }
 
     update() {
-
     }
 
     draw(ctx) {
-        ctx.strokeRect(50, 0, 400, 550);
-        ctx.strokeRect(30, 0, 440, 80);
+        // ctx.strokeRect(100, 100, 400, 480);
+        ctx.strokeRect(PARAMS.LEFTWALL, PARAMS.BEAKERTOP, PARAMS.RIGHTWALL - PARAMS.LEFTWALL, PARAMS.FLOOR - PARAMS.BEAKERTOP);
+        // ctx.strokeRect(PARAMS.LEFTWALL - 20, 0, PARAMS.RIGHTWALL - PARAMS.LEFTWALL + 40, PARAMS.BEAKERTOP);
+        ctx.strokeRect(150, 0, 300, 80);
+        ctx.strokeRect(0, 0, 100, 600);
+        ctx.strokeRect(PARAMS.RIGHTWALL, 0, 100, 100);
     }
 }
